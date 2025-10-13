@@ -16,7 +16,7 @@ public class TourService {
     }
 
     public List<Tour> getToursByDanhMuc(Integer maDanhMuc) {
-        return tourRepository.findByMaDanhMucAndTrangThai(maDanhMuc, "ACTIVE");
+        return tourRepository.findByDanhMuc_MaDanhMucAndTrangThai(maDanhMuc, "ACTIVE");
     }
 
     public Tour getTourById(Integer maTour) {

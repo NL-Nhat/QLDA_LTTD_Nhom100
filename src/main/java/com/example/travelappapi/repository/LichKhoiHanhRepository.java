@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface LichKhoiHanhRepository extends JpaRepository<LichKhoiHanh, Integer> {
-    List<LichKhoiHanh> findByMaTourAndTrangThai(Integer maTour, String trangThai);
+    List<LichKhoiHanh> findByTour_MaTourAndTrangThai(Integer maTour, String trangThai);
 }
 

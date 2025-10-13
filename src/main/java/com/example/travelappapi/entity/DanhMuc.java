@@ -12,14 +12,13 @@ public class DanhMuc {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer ma_danh_muc;
+    private Integer maDanhMuc;
 
     @Column(nullable = false, unique = true)
-    private String ten_danh_muc;
+    private String tenDanhMuc;
 
-    private String mo_ta;
-    private String url_icon;
-    private Boolean trang_thai;
-    private LocalDateTime thoi_gian_tao;
+    private String moTa;
+    private String urlIcon;
+    private Boolean trangThai;
+    private LocalDateTime thoiGianTao;
 }
-

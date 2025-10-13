@@ -12,18 +12,17 @@ public class HinhAnhTour {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer ma_hinh_anh;
+    private Integer maHinhAnh;
 
     @ManyToOne
-    @JoinColumn(name = "ma_tour")
+    @JoinColumn(name = "maTour")
     private Tour tour;
 
     @Column(nullable = false)
-    private String url_hinh_anh;
+    private String urlHinhAnh;
 
-    private String tieu_de_hinh_anh;
-    private Boolean la_chinh;
-    private Integer thu_tu_hien_thi;
-    private LocalDateTime thoi_gian_tao;
+    private String tieuDeHinhAnh;
+    private Boolean laChinh;
+    private Integer thuTuHienThi;
+    private LocalDateTime thoiGianTao;
 }
-

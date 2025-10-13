@@ -12,19 +12,18 @@ public class ThanhToan {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer ma_thanh_toan;
+    private Integer maThanhToan;
 
     @ManyToOne
-    @JoinColumn(name = "ma_dat_tour")
+    @JoinColumn(name = "maDatTour")
     private DatTour datTour;
 
-    private String phuong_thuc_thanh_toan;
-    private Double so_tien;
-    private String ma_giao_dich;
-    private String trang_thai_thanh_toan;
-    private LocalDateTime ngay_thanh_toan;
-    private LocalDateTime ngay_xu_ly;
-    private String ly_do_that_bai;
-    private String ghi_chu;
+    private String phuongThucThanhToan;
+    private Double soTien;
+    private String maGiaoDich;
+    private String trangThaiThanhToan;
+    private LocalDateTime ngayThanhToan;
+    private LocalDateTime ngayXuLy;
+    private String lyDoThatBai;
+    private String ghiChu;
 }
-

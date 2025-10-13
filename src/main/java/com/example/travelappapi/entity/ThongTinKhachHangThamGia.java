@@ -13,30 +13,29 @@ public class ThongTinKhachHangThamGia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer ma_thong_tin;
+    private Integer maThongTin;
 
     @ManyToOne
-    @JoinColumn(name = "ma_dat_tour", nullable = false)
+    @JoinColumn(name = "maDatTour", nullable = false)
     private DatTour datTour;
 
     @Column(nullable = false, length = 100)
-    private String ho_ten;
+    private String hoTen;
 
-    private LocalDate ngay_sinh;
+    private LocalDate ngaySinh;
 
     @Column(length = 15)
-    private String so_dien_thoai;
+    private String soDienThoai;
 
     @Column(length = 10)
-    private String gioi_tinh; // Nam / Nu / Khac
+    private String gioiTinh;
 
     @Column(length = 255)
-    private String dia_chi;
+    private String diaChi;
 
     @Column(length = 500)
-    private String ghi_chu;
+    private String ghiChu;
 
-    @Column(name = "thoi_gian_tao", columnDefinition = "DATETIME2")
-    private LocalDateTime thoi_gian_tao;
+    @Column(name = "thoiGianTao", columnDefinition = "DATETIME2")
+    private LocalDateTime thoiGianTao;
 }
-

@@ -16,7 +16,7 @@ public class ThongTinKhachHangThamGiaService {
     }
 
     public List<ThongTinKhachHangThamGia> getKhachByDatTour(Integer maDatTour) {
-        return thongTinRepository.findByMaDatTour(maDatTour);
+        return thongTinRepository.findByDatTour_MaDatTour(maDatTour);
     }
 }
 

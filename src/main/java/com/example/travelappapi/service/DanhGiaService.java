@@ -16,6 +16,6 @@ public class DanhGiaService {
     }
 
     public List<DanhGia> getReviewsByTour(Integer maTour) {
-        return danhGiaRepository.findByMaTour(maTour);
+        return danhGiaRepository.findByTour_MaTour(maTour);
     }
 }

@@ -13,21 +13,21 @@ public class LichKhoiHanh {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer ma_lich;
+    private Integer maLich;
 
     @ManyToOne
-    @JoinColumn(name = "ma_tour")
+    @JoinColumn(name = "maTour")
     private Tour tour;
 
-    private LocalDate ngay_khoi_hanh;
-    private LocalDate ngay_tro_ve;
-    private Integer so_cho_con_lai;
-    private Integer so_cho_da_dat;
+    private LocalDate ngayKhoiHanh;
+    private LocalDate ngayTroVe;
+    private Integer soChoConLai;
+    private Integer soChoDaDat;
     private Double gia;
-    private String trang_thai;
-    private String ten_huong_dan_vien;
-    private String so_dien_thoai_huong_dan_vien;
-    private String diem_hen;
-    private String ghi_chu_dac_biet;
-    private LocalDateTime thoi_gian_tao;
+    private String trangThai;
+    private String tenHuongDanVien;
+    private String soDienThoaiHuongDanVien;
+    private String diemHen;
+    private String ghiChuDacBiet;
+    private LocalDateTime thoiGianTao;
 }

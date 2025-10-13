@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/khach-tham-gia")
+@RequestMapping("/api/khachthamgia")
 @RequiredArgsConstructor
 public class ThongTinKhachHangThamGiaController {
     private final ThongTinKhachHangThamGiaService khachHangService;

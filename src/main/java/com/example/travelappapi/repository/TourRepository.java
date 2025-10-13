@@ -6,6 +6,6 @@ import java.util.List;
 
 public interface TourRepository extends JpaRepository<Tour, Integer> {
     List<Tour> findByTrangThai(String trangThai); // ACTIVE tours
-    List<Tour> findByMaDanhMucAndTrangThai(Integer maDanhMuc, String trangThai);
+    List<Tour> findByDanhMuc_MaDanhMucAndTrangThai(Integer maDanhMuc, String trangThai);
 }
 

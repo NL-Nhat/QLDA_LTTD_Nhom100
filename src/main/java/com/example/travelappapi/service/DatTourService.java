@@ -16,7 +16,7 @@ public class DatTourService {
     }
 
     public List<DatTour> getBookingsByUser(Integer maNguoiDung) {
-        return datTourRepository.findByMaNguoiDung(maNguoiDung);
+        return datTourRepository.findByNguoiDung_MaNguoiDung(maNguoiDung);
     }
 
     public DatTour getBookingById(Integer maDatTour) {

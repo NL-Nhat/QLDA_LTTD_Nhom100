@@ -12,22 +12,21 @@ public class DiemDen {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer ma_diem_den;
+    private Integer maDiemDen;
 
     @Column(nullable = false)
-    private String ten_diem_den;
+    private String tenDiemDen;
 
     @Column(nullable = false)
-    private String quoc_gia;
+    private String quocGia;
 
     @Column(nullable = false)
-    private String thanh_pho;
+    private String thanhPho;
 
-    private String mo_ta;
-    private String url_hinh_anh;
-    private Double vi_do;
-    private Double kinh_do;
-    private Boolean trang_thai;
-    private LocalDateTime thoi_gian_tao;
+    private String moTa;
+    private String urlHinhAnh;
+    private Double viDo;
+    private Double kinhDo;
+    private Boolean trangThai;
+    private LocalDateTime thoiGianTao;
 }
-

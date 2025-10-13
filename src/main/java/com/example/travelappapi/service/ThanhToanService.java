@@ -16,6 +16,6 @@ public class ThanhToanService {
     }
 
     public List<ThanhToan> getPaymentsByDatTour(Integer maDatTour) {
-        return thanhToanRepository.findByMaDatTour(maDatTour);
+        return thanhToanRepository.findByDatTour_MaDatTour(maDatTour);
     }
 }

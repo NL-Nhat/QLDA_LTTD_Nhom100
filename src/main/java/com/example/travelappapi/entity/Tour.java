@@ -13,40 +13,40 @@ public class Tour {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer ma_tour;
+    private Integer maTour;
 
     @Column(nullable = false)
-    private String ten_tour;
+    private String tenTour;
 
     @Column(nullable = false, unique = true)
-    private String ma_tour_code;
+    private String maTourCode;
 
     @ManyToOne
-    @JoinColumn(name = "ma_danh_muc")
+    @JoinColumn(name = "maDanhMuc")
     private DanhMuc danhMuc;
 
     @ManyToOne
-    @JoinColumn(name = "ma_diem_den")
+    @JoinColumn(name = "maDiemDen")
     private DiemDen diemDen;
 
-    private String mo_ta;
-    private String thoi_gian;
-    private Integer kich_thuoc_nhom_toi_da;
+    private String moTa;
+    private String thoiGian;
+    private Integer kichThuocNhomToiDa;
     private Double gia;
-    private Double ty_le_giam_gia;
-    private String url_hinh_anh_chinh;
-    private LocalTime thoi_gian_bat_dau;
-    private LocalTime thoi_gian_ket_thuc;
-    private String ngon_ngu_huong_dan;
-    private String quy_tac;
-    private Double diem_danh_gia_trung_binh;
-    private Integer so_luong_danh_gia;
-    private String trang_thai;
-    private Boolean noi_bat;
-    private LocalDateTime thoi_gian_tao;
-    private LocalDateTime thoi_gian_cap_nhat;
+    private Double tyLeGiamGia;
+    private String urlHinhAnhChinh;
+    private LocalTime thoiGianBatDau;
+    private LocalTime thoiGianKetThuc;
+    private String ngonNguHuongDan;
+    private String quyTac;
+    private Double diemDanhGiaTrungBinh;
+    private Integer soLuongDanhGia;
+    private String trangThai;
+    private Boolean noiBat;
+    private LocalDateTime thoiGianTao;
+    private LocalDateTime thoiGianCapNhat;
 
     @ManyToOne
-    @JoinColumn(name = "tao_boi")
+    @JoinColumn(name = "taoBoi")
     private NguoiDung nguoiTao;
 }

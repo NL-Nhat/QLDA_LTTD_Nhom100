@@ -26,7 +26,7 @@ public class NguoiDungService {
      */
     public NguoiDung register(NguoiDung req) {
         // kiểm tra
-        if (nguoiDungRepository.findByTenDangNhap(req.getTen_dang_nhap()).isPresent()) {
+        if (nguoiDungRepository.findByTenDangNhap(req.getTenDangNhap()).isPresent()) {
             throw new IllegalArgumentException("Tên đăng nhập đã tồn tại");
         }
         if (nguoiDungRepository.findByEmail(req.getEmail()).isPresent()) {
@@ -34,16 +34,16 @@ public class NguoiDungService {
         }
 
         // mã hóa mật khẩu (client gửi trường mat_khau_hash = mật khẩu thô)
-        String rawPassword = req.getMat_khau_hash();
+        String rawPassword = req.getMatKhauHash();
         String hashed = passwordEncoder.encode(rawPassword);
-        req.setMat_khau_hash(hashed);
+        req.setMatKhauHash(hashed);
 
         // thiết lập mặc định nếu cần
-        if (req.getVai_tro() == null) req.setVai_tro("CUSTOMER");
-        if (req.getTrang_thai() == null) req.setTrang_thai("ACTIVE");
+        if (req.getVaiTro() == null) req.setVaiTro("CUSTOMER");
+        if (req.getTrangThai() == null) req.setTrangThai("ACTIVE");
         LocalDateTime now = LocalDateTime.now();
-        req.setThoi_gian_tao(now);
-        req.setThoi_gian_cap_nhat(now);
+        req.setThoiGianTao(now);
+        req.setThoiGianCapNhat(now);
 
         return nguoiDungRepository.save(req);
     }
@@ -58,14 +58,14 @@ public class NguoiDungService {
             throw new IllegalArgumentException("Sai tên đăng nhập hoặc mật khẩu");
         }
         NguoiDung user = opt.get();
-        if (!passwordEncoder.matches(plainPassword, user.getMat_khau_hash())) {
+        if (!passwordEncoder.matches(plainPassword, user.getMatKhauHash())) {
             throw new IllegalArgumentException("Sai tên đăng nhập hoặc mật khẩu");
         }
 
         // cập nhật thời gian đăng nhập/cuối
         LocalDateTime now = LocalDateTime.now();
-        user.setDang_nhap_cuoi(now);
-        user.setThoi_gian_cap_nhat(now);
+        user.setDangNhapCuoi(now);
+        user.setThoiGianCapNhat(now);
         nguoiDungRepository.save(user);
 
         return user;

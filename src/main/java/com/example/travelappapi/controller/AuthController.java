@@ -62,20 +62,20 @@ public class AuthController {
      */
     private Map<String, Object> safeUserResponse(NguoiDung u) {
         Map<String, Object> m = new HashMap<>();
-        m.put("ma_nguoi_dung", u.getMa_nguoi_dung());
-        m.put("ten_dang_nhap", u.getTen_dang_nhap());
+        m.put("ma_nguoi_dung", u.getMaNguoiDung());
+        m.put("ten_dang_nhap", u.getTenDangNhap());
         m.put("email", u.getEmail());
-        m.put("ho_ten", u.getHo_ten());
-        m.put("so_dien_thoai", u.getSo_dien_thoai());
-        m.put("dia_chi", u.getDia_chi());
-        m.put("ngay_sinh", u.getNgay_sinh());
-        m.put("gioi_tinh", u.getGioi_tinh());
-        m.put("url_avatar", u.getUrl_avatar());
-        m.put("vai_tro", u.getVai_tro());
-        m.put("trang_thai", u.getTrang_thai());
-        m.put("thoi_gian_tao", u.getThoi_gian_tao());
-        m.put("thoi_gian_cap_nhat", u.getThoi_gian_cap_nhat());
-        m.put("dang_nhap_cuoi", u.getDang_nhap_cuoi());
+        m.put("ho_ten", u.getHoTen());
+        m.put("so_dien_thoai", u.getSoDienThoai());
+        m.put("dia_chi", u.getDiaChi());
+        m.put("ngay_sinh", u.getNgaySinh());
+        m.put("gioi_tinh", u.getGioiTinh());
+        m.put("url_avatar", u.getUrlAvatar());
+        m.put("vai_tro", u.getVaiTro());
+        m.put("trang_thai", u.getTrangThai());
+        m.put("thoi_gian_tao", u.getThoiGianTao());
+        m.put("thoi_gian_cap_nhat", u.getThoiGianCapNhat());
+        m.put("dang_nhap_cuoi", u.getDangNhapCuoi());
         return m;
     }
 }

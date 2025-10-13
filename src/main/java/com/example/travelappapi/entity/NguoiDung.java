@@ -13,28 +13,28 @@ public class NguoiDung {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer ma_nguoi_dung;
+    private Integer maNguoiDung;
 
     @Column(nullable = false, unique = true)
-    private String ten_dang_nhap;
+    private String tenDangNhap;
 
     @Column(nullable = false, unique = true)
     private String email;
 
     @Column(nullable = false)
-    private String mat_khau_hash;
+    private String matKhauHash;
 
     @Column(nullable = false)
-    private String ho_ten;
+    private String hoTen;
 
-    private String so_dien_thoai;
-    private String dia_chi;
-    private LocalDate ngay_sinh;
-    private String gioi_tinh;
-    private String url_avatar;
-    private String vai_tro;
-    private String trang_thai;
-    private LocalDateTime thoi_gian_tao;
-    private LocalDateTime thoi_gian_cap_nhat;
-    private LocalDateTime dang_nhap_cuoi;
+    private String soDienThoai;
+    private String diaChi;
+    private LocalDate ngaySinh;
+    private String gioiTinh;
+    private String urlAvatar;
+    private String vaiTro;
+    private String trangThai;
+    private LocalDateTime thoiGianTao;
+    private LocalDateTime thoiGianCapNhat;
+    private LocalDateTime dangNhapCuoi;
 }

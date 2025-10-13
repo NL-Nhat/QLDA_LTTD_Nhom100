@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 
 public interface DatTourRepository extends JpaRepository<DatTour, Integer> {
-    List<DatTour> findByMaNguoiDung(Integer maNguoiDung);
+    List<DatTour> findByNguoiDung_MaNguoiDung(Integer maNguoiDung);
 }
 

@@ -12,18 +12,17 @@ public class DanhGia {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer ma_danh_gia;
+    private Integer maDanhGia;
 
     @ManyToOne
-    @JoinColumn(name = "ma_tour")
+    @JoinColumn(name = "maTour")
     private Tour tour;
 
     @ManyToOne
-    @JoinColumn(name = "ma_nguoi_dung")
+    @JoinColumn(name = "maNguoiDung")
     private NguoiDung nguoiDung;
 
-    private Double diem_so;
-    private String binh_luan;
-    private LocalDateTime thoi_gian_tao;
+    private Double diemSo;
+    private String binhLuan;
+    private LocalDateTime thoiGianTao;
 }
-
